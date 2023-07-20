@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  margin-top: 200px;
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
+}
+
+.notes {
+    margin-top: 20px;
+
+  
+    h2 {
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+  

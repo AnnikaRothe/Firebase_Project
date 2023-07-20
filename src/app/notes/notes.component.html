@@ -1,0 +1,23 @@
+<h1>Firebase Testobjekt</h1>
+
+<div>
+    <form (ngSubmit)="addNote()">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="note.name" required> 
+        </div> <br>
+        <div>
+            <label for="note">Notiz:</label>
+
+            <textarea type="text" id="note" name="note" [(ngModel)]="note.note" required></textarea> 
+        </div> <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<h2>alle Notizen</h2>
+<div class="notes" *ngFor="let note of notes$ | async">
+    Name: {{note.name}} <br>
+    Email: {{note.note}} <br>
+    <button (click)="deleteNote(note.id)">Löschen</button>
+</div>

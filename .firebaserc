@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "notizblock-ff5bc": {
+      "hosting": {
+        "FirebaseNotizblock": [
+          "notizblock-ff5bc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "notizblock-ff5bc"
+  }
+}
