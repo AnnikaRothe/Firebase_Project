@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Firestore, addDoc, collection, collectionData, doc, deleteDoc, } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData, doc, deleteDoc, updateDoc, } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -41,5 +41,10 @@ getNotes() {
 deleteNote(id: string) {
   const userDoc = doc(this.noteCollection, id);
   deleteDoc(userDoc);
+}
+
+updateNote(id:string){
+  const userDoc = doc(this.noteCollection, id);
+  updateDoc(userDoc,this.note);
 }
 }
